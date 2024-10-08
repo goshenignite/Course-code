@@ -9,12 +9,12 @@ jobs:
             - name: multiline commands
               run: |
                node -v
-               npm - v
+               npm -v
     paralle-job-macos:
         runs-on: macos-latest
         steps:
             - name: view SW version
-              run: sw_veis
+              run: sw_vers
     job-depending:
         runs-on: windows-latest
         needs: run-shell-commands
