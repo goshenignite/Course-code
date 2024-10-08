@@ -9,4 +9,22 @@ jobs:
             - name: multiline commands
               run: |
                node -v
-               npm -v
+               npm - 
+    paralle-job-macos:
+        runs-on: macos-latest
+        steps:
+            - name: view SW version
+              run: sw_veis
+    job-depending:
+        runs-on: windows-latest
+        needs: run-shell-commands
+        steps:
+            - name: echo a string
+              run: write-output "windows string"
+            - name: Error Step
+              run: doesn'texit
+
+            
+            
+
+
