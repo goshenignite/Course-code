@@ -1,0 +1,30 @@
+name : first workflow
+on: [push]
+jobs:
+    run-shell-commands:
+        runs-on: ubuntu-latest
+        steps:
+            - name: echo a string
+              run: echo "hello world"
+            - name: multiline commands
+              run: |
+               node -v
+               npm -v
+    paralle-job-macos:
+        runs-on: macos-latest
+        steps:
+            - name: view SW version
+              run: sw_vers
+    job-depending:
+        runs-on: windows-latest
+        needs: run-shell-commands
+        steps:
+            - name: echo a string
+              run: write-output "windows string"
+            - name: Error Step
+              run: doesn'texiteeeeeee
+
+            
+            
+
+
