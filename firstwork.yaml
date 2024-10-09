@@ -22,7 +22,7 @@ jobs:
             - name: echo a string
               run: write-output "windows string"
             - name: Error Step
-              run: doesn'texiteeeeeee
+              run: doesn'pleae for foood
 
             
             
